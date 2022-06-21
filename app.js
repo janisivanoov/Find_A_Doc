@@ -7,13 +7,10 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var flash = require('connect-flash');
 var cassandra = require('cassandra-driver');
-
 var routes = require('./routes/index');
 var doctors = require('./routes/doctors');
 var categories = require('./routes/categories');
-
 var app = express();
-
 var client = new cassandra.Client({
     contactPoints:['127.0.0.1']
 });
